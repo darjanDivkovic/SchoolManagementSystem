@@ -8,8 +8,10 @@ package SchoolManagementSystem.com.darjanDivkovic;
  */
 public class Student extends Person{
 
-	private double feesPaid;
-	private double feesLeftToPay;
+	// Every student starts with 30000 debt
+	
+	private double feesPaid = 0;
+	private double feesLeftToPay = 30000;
 	
 	// Constructors
 	Student(){
@@ -22,5 +24,21 @@ public class Student extends Person{
 		this.feesLeftToPay = feesLeftToPay;
 	}
 	
+	
+	// Get & Set
+	
+	public double getFeesPaid() {
+		return feesPaid;
+	}
+
+	public double getFeesLeftToPay() {
+		return feesLeftToPay;
+	}
+
+	// Update fees paid - student made a payment 
+	public void payFee(double feePaid) {
+		feesPaid += feePaid;
+		feesLeftToPay -= feePaid;
+	}
 	
 }

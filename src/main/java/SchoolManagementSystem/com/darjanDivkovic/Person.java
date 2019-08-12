@@ -2,6 +2,7 @@ package SchoolManagementSystem.com.darjanDivkovic;
 
 /*
  * Purpose of this class is to be extended by :
+
  * 	- Student
  *  - &
  *  - Teacher Class
@@ -18,7 +19,9 @@ public class Person {
 	private String name;
 	private String surname;
 	
-	// Constructors
+	// Constructor
+	Person(){}
+	
 	Person(int id, String name, String surname)
 	{
 		this.id = id;
@@ -26,8 +29,7 @@ public class Person {
 		this.surname = surname;
 	}
 	
-	Person(){}
-	//
+	
 	
 	
 
