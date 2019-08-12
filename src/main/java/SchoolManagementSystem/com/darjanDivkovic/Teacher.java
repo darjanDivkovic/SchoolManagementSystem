@@ -29,4 +29,15 @@ public class Teacher extends Person {
 		this.salary = salary;
 	}
 
+	
+	// Get & Set
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	
+	
 }

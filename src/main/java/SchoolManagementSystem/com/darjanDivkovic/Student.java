@@ -36,9 +36,12 @@ public class Student extends Person{
 	}
 
 	// Update fees paid - student made a payment 
-	public void payFee(double feePaid) {
+	public double payFee(double feePaid) {
+
 		feesPaid += feePaid;
 		feesLeftToPay -= feePaid;
+		
+		return feePaid;
 	}
 	
 }
