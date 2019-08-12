@@ -26,6 +26,8 @@ public class Person {
 		this.surname = surname;
 	}
 	
+	Person(){}
+	//
 	
 	
 
