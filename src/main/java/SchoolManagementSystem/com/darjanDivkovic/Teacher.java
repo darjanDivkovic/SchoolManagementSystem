@@ -47,6 +47,7 @@ public class Teacher extends Person {
 
 	// RecieveSalary
 	public void recieveSalary(double salary) {
+
 		this.moneyRecievedInSalaries += salary;
 		
 	}
