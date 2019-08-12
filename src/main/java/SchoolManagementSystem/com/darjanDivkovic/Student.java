@@ -18,7 +18,12 @@ public class Student extends Person{
 		super();
 	}
 	
+	Student(int id, String name, String surname){
+		super(id,name,surname);
+	}
+	
 	Student(int id, String name, String surname, double feesPaid, double feesLeftToPay){
+
 		super(id,name,surname);
 		this.feesPaid = feesPaid;
 		this.feesLeftToPay = feesLeftToPay;
