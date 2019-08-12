@@ -5,8 +5,7 @@ import java.util.ArrayList;
 public class School {
 	
 	// Contains teachers and students
-	ArrayList<Teacher> teachers = new ArrayList();
-	ArrayList<Student> students = new ArrayList();
+	ArrayList<Person> schoolRegister = new ArrayList();
 	double moneyEarned = 0;
 	double schoolBalance = 0;
 	double paidInSalaries = 0;
@@ -51,9 +50,11 @@ public class School {
 	}
 	
 	// Create new school Member and add to respectable arrayL
-	public Teacher createNewTeacher() {
-		Teacher teacher;
-		System.out.println("Adding a teachers member!");
+	public Person createNewPerson() {
+
+
+		Person person = null;
+		System.out.println("Adding a new member!");
 		
 		System.out.println("Enter name:");
 		String name = Util.unos.nextLine();
@@ -64,16 +65,42 @@ public class School {
 		System.out.println("Give new ID :");
 		int id = Util.unos.nextInt();
 		
-		System.out.println("Enter teachers salary: ");
-		double newSalary = Util.unos.nextDouble();
-
-		return teacher = new Teacher(id,name,surname,newSalary);
+		System.out.println("Is this person a Teacher or a Student?");
+		System.out.println("[T] - Teacher");
+		System.out.println("[S] - Student");
+		
+		Util.unos.hasNextLine();
+		String pick = Util.unos.next();
+		System.out.println(pick);
+		person = getTypeOfPerson(person, pick);
+		
+		person.setId(id);
+		person.setName(name);
+		person.setSurname(surname);
+		
+		return person;
 	}
 	
-	public void addTeacherToTeachersList(Teacher teacher) {
-		teachers.add(teacher);
+	// Takes the Person from createNewPerson method and uses polymorphism to declare the type
+	// depending on the user input - S - student - T - techer
+	
+	private Person getTypeOfPerson(Person person, String pick) {
+
+		if(pick.equals("T"))
+			return person = new Teacher();
+		if(pick.equals("S"))
+			return person = new Student();
+		else return person;
+	}
+	
+	public void addNewPersonToSchoolRegister() {
+
+		schoolRegister.add(createNewPerson());
 	}
 
-	
-
+	public void printOutSchoolRegister() {
+		for(int i = 0 ; i < schoolRegister.size() ; i++) {
+			System.out.println(schoolRegister.get(i).toString());
+		}
+	}
 }

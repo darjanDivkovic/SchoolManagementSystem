@@ -48,6 +48,14 @@ public class Student extends Person{
 		
 		return feePaid;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [feesPaid=" + feesPaid + ", feesLeftToPay=" + feesLeftToPay + ", toString()=" + super.toString()
+				+ "]";
+	}
+
+	
 	
 	
 }
