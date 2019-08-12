@@ -51,9 +51,9 @@ public class School {
 	}
 	
 	// Create new school Member and add to respectable arrayL
-	public Person createNewPerson() {
-		Person person;
-		System.out.println("Adding a school member!");
+	public Teacher createNewTeacher() {
+		Teacher teacher;
+		System.out.println("Adding a teachers member!");
 		
 		System.out.println("Enter name:");
 		String name = Util.unos.nextLine();
@@ -64,24 +64,16 @@ public class School {
 		System.out.println("Give new ID :");
 		int id = Util.unos.nextInt();
 		
-		System.out.println("Who is this person ? [T-teacher / S-student]");
-		String type = Util.unos.nextLine();
-		
-		if(type == "T") {
-			System.out.println("Enter teachers salary: ");
-			double newSalary = Util.unos.nextDouble();
-			person = new Teacher(id,name,surname, newSalary);
-			return person;
-		}
-		if(type == "S") {
-			person = new Student(id,name,surname);
-			return person;
-		}
-		
-		System.out.println("Wrong input son!");
-		return null;
-		
+		System.out.println("Enter teachers salary: ");
+		double newSalary = Util.unos.nextDouble();
+
+		return teacher = new Teacher(id,name,surname,newSalary);
 	}
 	
+	public void addTeacherToTeachersList(Teacher teacher) {
+		teachers.add(teacher);
+	}
+
 	
+
 }
