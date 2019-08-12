@@ -16,6 +16,8 @@ public class Teacher extends Person {
 	
 	// DF
 	private double salary;
+	private double moneyRecievedInSalaries = 0;
+	
 	
 	// Constructors
 	Teacher()
@@ -39,5 +41,13 @@ public class Teacher extends Person {
 		this.salary = salary;
 	}
 	
-	
+	public double getMoneyRecievedInSalaries() {
+		return moneyRecievedInSalaries;
+	}
+
+	// RecieveSalary
+	public void recieveSalary(double salary) {
+		this.moneyRecievedInSalaries += salary;
+		
+	}
 }

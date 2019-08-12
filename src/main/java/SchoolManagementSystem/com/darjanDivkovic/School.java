@@ -9,15 +9,30 @@ public class School {
 	ArrayList<Student> students = new ArrayList();
 	double moneyEarned = 0;
 	double schoolBalance = 0;
-	double salariesPaid = 0;
+	double paidInSalaries = 0;
 	
 	// Constructors
 	School(){}
+	
+	School(double schoolBalance){
+		this.schoolBalance = schoolBalance;
+	}
 	
 	// Recieve a payment
 	public void recievePayment(double payment) {
 		this.moneyEarned += payment;
 		this.schoolBalance += payment;
+	}
+	
+	public double payTeacher(double payment) {
+		if(schoolBalance >= payment) {
+		schoolBalance -= payment;
+		paidInSalaries += payment;
+		
+		return payment;
+		}
+		else
+		return 0;
 	}
 
 	// Get & Set
@@ -31,7 +46,8 @@ public class School {
 	}
 
 	public double getSalariesPaid() {
-		return salariesPaid;
+
+		return paidInSalaries;
 	}
 	
 	
