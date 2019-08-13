@@ -52,7 +52,7 @@ public class MAIN {
 			System.out.println("	1. -> Hand out salarie to specific Teacher");
 			System.out.println("	2. -> Give salaries to all Teachers");
 			System.out.println("	3. -> Recieve payment from Student");				
-			System.out.println("    4. <- BACK");
+			System.out.println("	4. <- BACK");
 			pick = Util.unos.nextInt();
 		    }
 		    while(pick != 4);
@@ -73,13 +73,14 @@ public class MAIN {
 			if(pick == 4) {
 			do {
 			System.out.println("MISC: ");	
-			System.out.println("	1. -> Get date");
-			System.out.println("	2. -> Get Time");
-			System.out.println("	3. -> Get A nice message!");	
-			System.out.println("	4. <- BACK");
+			System.out.println("	1. -> Get date & time");
+			System.out.println("	2. -> Get A nice message!");	
+			System.out.println("	3. <- BACK");
 			pick = Util.unos.nextInt();
+			
+			if(pick == 1) Misc.printOutCurrentDate();
 			}
-			while(pick != 4);
+			while(pick != 3);
 			pick = 0;
 			}
 		
