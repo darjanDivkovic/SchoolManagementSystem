@@ -39,4 +39,5 @@ public class TeacherTestCase {
 		
 		assertEquals(100, newSalary, 0);
 	}
+
 }

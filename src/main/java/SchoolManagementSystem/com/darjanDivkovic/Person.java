@@ -32,6 +32,7 @@ public class Person {
 		this.surname = "";
 	}
 	
+	
 	private int createNewID() {
 		System.out.println("Give new ID :");
 		int id = Util.unos.nextInt();

@@ -1,5 +1,7 @@
 package SchoolManagementSystem.com.darjanDivkovic;
 
+import javax.swing.text.Utilities;
+
 public class MAIN {
 	
 	/*
@@ -17,11 +19,35 @@ public class MAIN {
 
 	public static void main(String[] args) {
 		
-		
+	
 		School school = new School();
-		school.addNewPersonToSchool();
+		System.out.println("Welcome to ShcoolManagementSystem");
+		System.out.println("----------------------------------");
 		
-		school.printOutSchoolRegister();
+		int pick = 0;
+		do {
+			System.out.println("CHOOSE:");
+			System.out.println("1] SCHOOL REGISTER OPTIONS");
+			System.out.println("2] MANAGE PAYMENTS");
+			System.out.println("3] CHECK BALANCE AND DEBT INFO");
+			System.out.println("4] MISC");
+			System.out.println("5] EXIT");
+			
+			pick = Util.unos.nextInt();
+
+			if(pick == 1) {
+			do {
+			System.out.println("	1. -> Add new Person to SchoolRegister ");
+			System.out.println("	2. -> View SchoolRegister");	
+			System.out.println("	3. <- BACK ");
+			pick = Util.unos.nextInt();
+			}
+			while(pick != 3);
+			}
+		
+		}
+		while(pick != 5);
+		System.out.println("Bye !");
 	}
 
 }

@@ -7,27 +7,15 @@ import org.junit.Test;
 public class StudentTestCase {
 
 	@Test
-	public void testStudentPayFeeShouldIncreaseFeesPayedWhenGivenPayment() {
-
-		// Arrange
-		Student student = new Student();
+	public void testPayFeeShouldIncreaseFeesPaidWhenGivenValue() {
+		Student student = new Student("test");
 		
-		// Act
-		student.payFee(10000);
-		double feesPaid = student.getFeesPaid();
+		student.payFee(100);
+		double newFeesPaid = student.getFeesPaid();
 		
-		// Assert
-		assertEquals(10000, feesPaid, 10);
+		assertEquals(100, newFeesPaid, 0);
 	}
-
-	@Test
-	public void testStudentPayFeeShouldDecreaseFeesLeftToPayWhenPaymentAdded() {
-		
-		Student student = new Student();
-		
-		student.payFee(10000);
-		double feesLeftToPay = student.getFeesLeftToPay();
-		
-		assertEquals(20000, feesLeftToPay, 10);
-	}
+	
+ 
+	
 }
