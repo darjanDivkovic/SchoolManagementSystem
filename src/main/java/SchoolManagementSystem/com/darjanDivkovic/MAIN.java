@@ -17,8 +17,11 @@ public class MAIN {
 
 	public static void main(String[] args) {
 		
-		Person person = new Person();
-		System.out.println(person.toString());
+		
+		School school = new School();
+		school.addNewPersonToSchool();
+		
+		school.printOutSchoolRegister();
 	}
 
 }

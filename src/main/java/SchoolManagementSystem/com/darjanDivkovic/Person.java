@@ -42,6 +42,7 @@ public class Person {
 	private String createNewName() {
 		System.out.println("Creating a new person");
 		System.out.println("Enter name:");
+		Util.unos.nextLine();
 		String name = Util.unos.nextLine();
 		return name;
 	}
@@ -73,33 +74,7 @@ public class Person {
 	}
 	
 	
-//	public Person createNewPerson() {
-//
-//
-//
-//		Person person = null;
-//		System.out.println("Adding a new member!");
-//		
-//		
-//		
-//		
-//		
-//		
-//		System.out.println("Is this person a Teacher or a Student?");
-//		System.out.println("[T] - Teacher");
-//		System.out.println("[S] - Student");
-//		
-//		Util.unos.hasNextLine();
-//		String pick = Util.unos.next();
-//		System.out.println(pick);
-//		person = getTypeOfPerson(person, pick);
-//		
-//		person.setId(id);
-//		person.setName(name);
-//		person.setSurname(surname);
-//		
-//		return person;
-//	}
+
 
 	
 }
