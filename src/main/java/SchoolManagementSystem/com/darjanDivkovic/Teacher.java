@@ -25,6 +25,12 @@ public class Teacher extends Person {
 		super();
 	}
 	
+	Teacher(String test){
+		super(test);
+		this.salary = 0;
+		this.moneyRecievedInSalaries = 0;
+	}
+	
 	Teacher(int id, String name, String surname, double salary)
 	{
 		super(id,name,surname);

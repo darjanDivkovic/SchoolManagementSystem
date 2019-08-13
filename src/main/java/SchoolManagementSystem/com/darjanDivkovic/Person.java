@@ -18,13 +18,18 @@ public class Person {
 	private int id;
 	private String name;
 	private String surname;
-	
+
 	// Constructor
 	Person(){
 		this.name = createNewName();
 		this.surname = createNewSurname();
 		this.id = createNewID();
 	
+	}
+	Person(String test){
+		this.id = 0;
+		this.name = "";
+		this.surname = "";
 	}
 	
 	private int createNewID() {
