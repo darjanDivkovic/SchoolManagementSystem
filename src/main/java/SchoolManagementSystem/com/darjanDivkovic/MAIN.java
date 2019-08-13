@@ -54,6 +54,17 @@ public class MAIN {
 		    }
 		    while(pick != 4);
 		    }
+			if(pick == 3) {
+		    do {
+			System.out.println("CHECH BALANCE AND DEBT INFO: ");
+			System.out.println("	1. -> Check Schools balance");
+			System.out.println("	2. -> Check Money Earned");
+			System.out.println("	3. -> Check what the school owns");	
+			System.out.println("	4. <- BACK ");
+			pick = Util.unos.nextInt();
+		    }
+		    while(pick != 4);
+		    }
 		
 		}
 		while(pick != 5);
