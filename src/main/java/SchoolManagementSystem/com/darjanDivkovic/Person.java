@@ -20,8 +20,32 @@ public class Person {
 	private String surname;
 	
 	// Constructor
-	Person(){}
+	Person(){
+		this.name = createNewName();
+		this.surname = createNewSurname();
+		this.id = createNewID();
 	
+	}
+	
+	private int createNewID() {
+		System.out.println("Give new ID :");
+		int id = Util.unos.nextInt();
+		return id;
+	}
+
+	private String createNewSurname() {
+		System.out.println("Enter surname:");
+		String surname = Util.unos.nextLine();
+		return surname;
+	}
+
+	private String createNewName() {
+		System.out.println("Creating a new person");
+		System.out.println("Enter name:");
+		String name = Util.unos.nextLine();
+		return name;
+	}
+
 	Person(int id, String name, String surname)
 	{
 		this.id = id;
@@ -49,7 +73,33 @@ public class Person {
 	}
 	
 	
-	
-	
+//	public Person createNewPerson() {
+//
+//
+//
+//		Person person = null;
+//		System.out.println("Adding a new member!");
+//		
+//		
+//		
+//		
+//		
+//		
+//		System.out.println("Is this person a Teacher or a Student?");
+//		System.out.println("[T] - Teacher");
+//		System.out.println("[S] - Student");
+//		
+//		Util.unos.hasNextLine();
+//		String pick = Util.unos.next();
+//		System.out.println(pick);
+//		person = getTypeOfPerson(person, pick);
+//		
+//		person.setId(id);
+//		person.setName(name);
+//		person.setSurname(surname);
+//		
+//		return person;
+//	}
 
+	
 }

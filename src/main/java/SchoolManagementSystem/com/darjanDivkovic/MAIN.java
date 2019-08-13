@@ -17,12 +17,8 @@ public class MAIN {
 
 	public static void main(String[] args) {
 		
-		School school = new School();
-		
-		school.addNewPersonToSchoolRegister();
-		
-		school.printOutSchoolRegister();
-		
+		Person person = new Person();
+		System.out.println(person.toString());
 	}
 
 }
