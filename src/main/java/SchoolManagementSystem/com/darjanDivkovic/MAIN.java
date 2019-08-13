@@ -78,7 +78,8 @@ public class MAIN {
 			System.out.println("	3. <- BACK");
 			pick = Util.unos.nextInt();
 			
-			if(pick == 1) Misc.printOutCurrentDate();
+			if(pick == 1) Misc.printOutCurrentDateAndTime();
+			if(pick == 2) Misc.printOutANiceMessage();
 			}
 			while(pick != 3);
 			pick = 0;
