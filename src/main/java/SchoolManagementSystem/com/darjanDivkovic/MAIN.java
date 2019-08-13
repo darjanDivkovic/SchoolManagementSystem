@@ -37,15 +37,18 @@ public class MAIN {
 
 			if(pick == 1) {
 			do {
+			System.out.println("SCHOOL REGISTER OPTIONS:");
 			System.out.println("	1. -> Add new Person to SchoolRegister ");
 			System.out.println("	2. -> View SchoolRegister");	
 			System.out.println("	3. <- BACK ");
 			pick = Util.unos.nextInt();
 			}
 			while(pick != 3);
+			pick = 0;
 			}
 			if(pick == 2) {
 		    do {
+		   	System.out.println("MANAGE PAYMENTS:");
 			System.out.println("	1. -> Hand out salarie to specific Teacher");
 			System.out.println("	2. -> Give salaries to all Teachers");
 			System.out.println("	3. -> Recieve payment from Student");				
@@ -53,6 +56,7 @@ public class MAIN {
 			pick = Util.unos.nextInt();
 		    }
 		    while(pick != 4);
+		    pick = 0;
 		    }
 			if(pick == 3) {
 		    do {
@@ -64,7 +68,20 @@ public class MAIN {
 			pick = Util.unos.nextInt();
 		    }
 		    while(pick != 4);
+		    pick = 0;
 		    }
+			if(pick == 4) {
+			do {
+			System.out.println("MISC: ");	
+			System.out.println("	1. -> Get date");
+			System.out.println("	2. -> Get Time");
+			System.out.println("	3. -> Get A nice message!");	
+			System.out.println("	4. <- BACK");
+			pick = Util.unos.nextInt();
+			}
+			while(pick != 4);
+			pick = 0;
+			}
 		
 		}
 		while(pick != 5);
