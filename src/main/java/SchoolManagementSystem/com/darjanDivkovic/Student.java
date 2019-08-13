@@ -51,8 +51,8 @@ public class Student extends Person{
 
 	@Override
 	public String toString() {
-		return "Student [feesPaid=" + feesPaid + ", feesLeftToPay=" + feesLeftToPay + ", toString()=" + super.toString()
-				+ "]";
+		String object = "STUDENT|"+ super.toString() + "| FEES LEFT TO PAY = "+feesLeftToPay+"$| FEES PAID = "+feesPaid+"$|";
+		return object;
 	}
 
 	

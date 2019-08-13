@@ -70,7 +70,9 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", surname=" + surname + "]";
+
+		String object = "ID = "+id+"| NAME = "+name+"| SURNAME = "+surname;
+		return object;  
 	}
 	
 	
