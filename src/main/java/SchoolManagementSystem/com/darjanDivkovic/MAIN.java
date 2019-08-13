@@ -44,6 +44,16 @@ public class MAIN {
 			}
 			while(pick != 3);
 			}
+			if(pick == 2) {
+		    do {
+			System.out.println("	1. -> Hand out salarie to specific Teacher");
+			System.out.println("	2. -> Give salaries to all Teachers");
+			System.out.println("	3. -> Recieve payment from Student");				
+			System.out.println("    4. <- BACK");
+			pick = Util.unos.nextInt();
+		    }
+		    while(pick != 4);
+		    }
 		
 		}
 		while(pick != 5);
