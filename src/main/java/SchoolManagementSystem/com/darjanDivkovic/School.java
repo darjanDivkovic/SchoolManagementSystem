@@ -81,11 +81,25 @@ public class School {
 	
 	private Person getTypeOfPerson(Person person, String pick) {
 
-
 		if(pick.equals("T"))
 			return person = new Teacher();
 		if(pick.equals("S"))
 			return person = new Student();
 		else return person;
+	}
+	
+	// Find person in register by id
+	private Person findPersonInRegister(int id) {
+		Person person = new Person("blankPerson");
+				
+		for(int i = 0 ; i < schoolRegister.size() ; i++) {
+			if(schoolRegister.get(i).getId() == id) {
+				System.out.println("Person found!");
+				return schoolRegister.get(i);
+				
+			}
+			System.out.println("Person not found!");
+			return null;
+		}
 	}
 }

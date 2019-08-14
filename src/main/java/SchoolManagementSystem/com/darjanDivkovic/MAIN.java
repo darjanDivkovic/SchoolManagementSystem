@@ -42,6 +42,16 @@ public class MAIN {
 			System.out.println("	2. -> View SchoolRegister");	
 			System.out.println("	3. <- BACK ");
 			pick = Util.unos.nextInt();
+			
+			// Add new person to school register
+			switch(pick) {
+			case 1:
+				school.addNewPersonToSchool();
+				break;
+			case 2:
+				school.printOutSchoolRegister();
+				break;
+			}
 			}
 			while(pick != 3);
 			pick = 0;

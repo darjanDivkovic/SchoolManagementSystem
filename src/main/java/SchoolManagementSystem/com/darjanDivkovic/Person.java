@@ -74,6 +74,10 @@ public class Person {
 		this.surname = surname;
 	}
 
+	
+	public int getId() {
+		return id;
+	}
 	@Override
 	public String toString() {
 
