@@ -122,7 +122,7 @@ public class School {
 		System.out.println("New Student added ! :)");
 		
 	}
-	
+	//
 	// Pay salary to teacher
 	public double paySalaryToTeacher(int id, double payment) {
 
