@@ -5,7 +5,9 @@ import java.util.ArrayList;
 public class School {
 	
 	// Contains teachers and students
-	ArrayList<Person> schoolRegister = new ArrayList();
+	ArrayList<Teacher> teachers = new ArrayList();
+	ArrayList<Student> students = new ArrayList();
+	
 	double moneyEarned = 0;
 	double schoolBalance = 0;
 	double paidInSalaries = 0;
@@ -54,29 +56,29 @@ public class School {
 	// Takes the Person from createNewPerson method and uses polymorphism to declare the type
 	// depending on the user input - S - student - T - techer
 	
-	public void addNewPersonToSchool() {
-		Person person = null;
+	
+	
+	public void addNewTeacherToTeachers() {
 		
-		System.out.println("Adding a new member!");
-		
-		System.out.println("Is this person a Teacher or a Student?");
-		System.out.println("[T] - Teacher");
-		System.out.println("[S] - Student");
-		
-		Util.unos.hasNextLine();
-		String pick = Util.unos.next();
-		System.out.println(pick);
-		person = getTypeOfPerson(person, pick);
-		
-		schoolRegister.add(person);
+		System.out.println("Adding a new staff member!");
+		Teacher teacher = new Teacher();
+	
+		teachers.add(teacher);
 		System.out.println("New member added ! :)");
 	}
 
 	// Print out School Register
 	public void printOutSchoolRegister() {
-		for(int i = 0 ; i < schoolRegister.size() ; i++) {
-			System.out.println(schoolRegister.get(i).toString());
+		System.out.println("TEACHERS :");
+		for(int i = 0 ; i < teachers.size() ; i++) {
+			System.out.println(teachers.get(i).toString());
 		}
+		System.out.println("---------------------------------");
+		System.out.println("STUDENTS");
+		for(int i = 0 ; i < students.size() ; i++) {
+			System.out.println(students.get(i).toString());
+		}
+		
 	}
 	
 	private Person getTypeOfPerson(Person person, String pick) {
@@ -89,17 +91,38 @@ public class School {
 	}
 	
 	// Find person in register by id
-	private Person findPersonInRegister(int id) {
-		Person person = new Person("blankPerson");
+	private Teacher findTeacherInRegister(int id) {
 				
-		for(int i = 0 ; i < schoolRegister.size() ; i++) {
-			if(schoolRegister.get(i).getId() == id) {
-				System.out.println("Person found!");
-				return schoolRegister.get(i);
+		for(int i = 0 ; i < teachers.size() ; i++) {
+			if(teachers.get(i).getId() == id) {
+				System.out.println("Teacher found!");
+				return teachers.get(i);
 				
 			}
-			System.out.println("Person not found!");
-			return null;
+			
 		}
+		System.out.println("Person not found!");
+		return null;
 	}
-}
+
+	public void addNewStudentToStudents() {
+		System.out.println("Adding a new Student member!");
+		Student student = new Student();
+	
+		students.add(student);
+		System.out.println("New Student added ! :)");
+		
+	}
+	
+//	// Pay salary to teacher
+//	public double paySalaryToTeacher(int id, double payment) {
+//		Person person = getTypeOfPerson(person, "T");
+//		
+//		 
+//		Teacher teacher = findPersonInRegister(id);
+//		
+//		teacher.recieveSalary(payment);
+//		
+//		
+		
+	}

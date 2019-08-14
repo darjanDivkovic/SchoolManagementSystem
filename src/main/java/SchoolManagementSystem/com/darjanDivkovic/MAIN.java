@@ -46,7 +46,22 @@ public class MAIN {
 			// Add new person to school register
 			switch(pick) {
 			case 1:
-				school.addNewPersonToSchool();
+				do {
+					pick = 0;
+					System.out.println("		1. -> Add new Teacher!");
+					System.out.println("		2. -> Add new Student!");
+					System.out.println("		3. <- BACK");
+					pick = Util.unos.nextInt();
+					
+					if(pick == 1) {
+						school.addNewTeacherToTeachers();
+					}
+					if(pick == 2) {
+						school.addNewStudentToStudents();
+					}
+				}
+				while(pick != 3);
+				
 				break;
 			case 2:
 				school.printOutSchoolRegister();
