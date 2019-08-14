@@ -110,7 +110,24 @@ public class MAIN {
 			System.out.println("	2. -> Check Money Earned");
 			System.out.println("	3. -> Check what the school owns");	
 			System.out.println("	4. <- BACK ");
+				
 			pick = Util.unos.nextInt();
+			if(pick == 1) {
+				System.out.println("CURRENT SCHOOL BALANCE IS: ");
+				System.out.println(" -> "+school.getSchoolBalance());
+			}
+			if(pick == 2) {
+				System.out.println("SCHOOL HAS EARNED: ");
+				System.out.println(" -> "+school.moneyEarned);
+			}
+			if(pick == 3) {
+				System.out.println("SCHOOL HAS TO PAY $ IN SALARIES");
+				double schoolHasToPay = school.getAllTeachersSalaries() - school.getSalariesPaid();
+				System.out.print("	-> "+schoolHasToPay+" $ in salaries to :  ");
+				System.out.println(school.getNumberOfTechers()+" teachers.");
+				System.out.println();
+				
+			}
 		    }
 		    while(pick != 4);
 		    pick = 0;

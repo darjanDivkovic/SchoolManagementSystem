@@ -164,6 +164,7 @@ public class School {
 	
 	
 	public double getAllTeachersSalaries() {
+
 		double salaries = 0;
 		for(int i = 0 ; i < teachers.size(); i++) {
 			salaries += teachers.get(i).getSalary();
@@ -200,7 +201,9 @@ public class School {
  		return feePaid;
  	}
  	
-
+ 	public int getNumberOfTechers() {
+ 		return teachers.size();
+ 	}
 
 
 }
