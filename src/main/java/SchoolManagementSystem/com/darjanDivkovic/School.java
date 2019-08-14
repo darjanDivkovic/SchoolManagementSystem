@@ -90,7 +90,7 @@ public class School {
 		else return person;
 	}
 	
-	// Find person in register by id
+	// Find teacher  by id
 	private Teacher findTeacherInRegister(int id) {
 				
 		for(int i = 0 ; i < teachers.size() ; i++) {
@@ -114,15 +114,17 @@ public class School {
 		
 	}
 	
-//	// Pay salary to teacher
-//	public double paySalaryToTeacher(int id, double payment) {
-//		Person person = getTypeOfPerson(person, "T");
-//		
-//		 
-//		Teacher teacher = findPersonInRegister(id);
-//		
-//		teacher.recieveSalary(payment);
-//		
-//		
+	// Pay salary to teacher
+	public double paySalaryToTeacher(int id, double payment) {
+		// bring him here
+		Teacher teacher = null;
+		// Find teacher by id
+		teacher = findTeacherInRegister(id);
+		
+		// Make him recieve his salary
+		teacher.recieveSalary(payment);
+		
+		return payment;
 		
 	}
+}

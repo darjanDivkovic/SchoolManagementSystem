@@ -79,6 +79,16 @@ public class MAIN {
 			System.out.println("	3. -> Recieve payment from Student");				
 			System.out.println("	4. <- BACK");
 			pick = Util.unos.nextInt();
+			
+			if(pick == 1) {
+				System.out.println("HANDING OUT A SALARY!");
+				System.out.println("Enter teachers id:");
+				System.out.println("Enter the dedsired payment:");
+				Util.unos.nextLine();
+				int id = Util.unos.nextInt();
+				double payment = Util.unos.nextDouble();
+				school.paySalaryToTeacher(id, payment);
+			}
 		    }
 		    while(pick != 4);
 		    pick = 0;
