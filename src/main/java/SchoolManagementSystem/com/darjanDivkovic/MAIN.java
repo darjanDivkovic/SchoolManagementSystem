@@ -93,6 +93,12 @@ public class MAIN {
 				System.out.println("HANDING OUT SALARIES TO ALL TEACHERS");
 				school.paySalaryToAllTeachers();
 			}
+			if(pick == 3) {
+				System.out.println("RECIEVE PAYMENT FROM STUDENT");
+				System.out.println("Enter the id of the student:");
+				int id = Util.unos.nextInt();
+				school.recievePaymentFromStudent(id);
+			}
 		    }
 		    while(pick != 4);
 		    pick = 0;

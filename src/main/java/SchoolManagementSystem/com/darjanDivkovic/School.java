@@ -84,13 +84,13 @@ public class School {
 		else return person;
 	}
 	
-	// Find teacher  by id
-	private Teacher findTeacherInRegister(int id) {
+	// Find Student  by id
+	private Student findStudentInRegister(int id) { 
 				
-		for(int i = 0 ; i < teachers.size() ; i++) {
-			if(teachers.get(i).getId() == id) {
-				System.out.println("Teacher found!");
-				return teachers.get(i);
+		for(int i = 0 ; i < students.size() ; i++) {
+			if(students.get(i).getId() == id) {
+				System.out.println("Student found!");
+				return students.get(i);
 				
 			}
 			
@@ -99,6 +99,21 @@ public class School {
 		return null;
 	}
 
+	// Find teacher  by id
+		private Teacher findTeacherInRegister(int id) { 
+					
+			for(int i = 0 ; i < teachers.size() ; i++) {
+				if(teachers.get(i).getId() == id) {
+					System.out.println("Teacher found!");
+					return teachers.get(i);
+					
+				}
+				
+			}
+			System.out.println("Person not found!");
+			return null;
+		}
+	
 	public void addNewStudentToStudents() {
 		System.out.println("Adding a new Student member!");
 		Student student = new Student();
@@ -156,7 +171,6 @@ public class School {
 		return salaries;
 	}
 	
-	
 	// Check if School Balance is big enough ( for payments )
  	public boolean isSchoolBalanceBigEnough(double payment) {
 		if(payment < this.schoolBalance) 
@@ -165,4 +179,28 @@ public class School {
 			return false;
 		return false;
 	}
+
+ 	// Payment by student
+ 	// Find student
+ 	// Let him pay
+ 	// Find student
+ 	
+ 	public double recievePaymentFromStudent(int id) {
+ 		//Find student
+ 		Student student = findStudentInRegister(id);
+ 		System.out.println("How much does "+student.getName()+" wants to pay ?");
+ 		double feePaid = Util.unos.nextDouble();
+ 
+ 		student.payFee(feePaid);
+ 
+ 		System.out.println("Left to pay: "+student.getFeesLeftToPay()+" $");
+ 		System.out.println("Has paid: "+student.getFeesPaid()+" $");
+ 		
+ 		this.schoolBalance += feePaid;
+ 		return feePaid;
+ 	}
+ 	
+
+
+
 }
