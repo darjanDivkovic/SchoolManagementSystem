@@ -111,6 +111,7 @@ public class School {
 	// Pay salary to teacher
 	public double paySalaryToTeacher(int id, double payment) {
 
+
 		if(!isSchoolBalanceBigEnough(payment)) {
 			System.out.println("Balance not big enough");
 			return 0;
@@ -123,13 +124,41 @@ public class School {
 		
 		// Make him recieve his salary
 		teacher.recieveSalary(payment);
-		
+		this.schoolBalance -= payment;
 		return payment;
 		
 	}
 
+	// Pay salary to all teachers
+	public double paySalaryToAllTeachers() {
+		// Find how much to pay
+		double salariesToPay = getAllTeachersSalaries();
+		// Find out is it possible to pay the amount
+		// Pay if can
+		if(isSchoolBalanceBigEnough(salariesToPay)) {
+			for(int i = 0 ; i < teachers.size() ; i++) {
+				// Find next teachers salary
+				double toPayNext = teachers.get(i).getSalary();
+				// Pay him his salary
+				teachers.get(i).recieveSalary(toPayNext);
+				System.out.println(teachers.get(i).getName()+" "+teachers.get(i).getSurname()+" got paid = "+toPayNext+"$");
+			}
+		}
+		return salariesToPay;
+	}
+	
+	
+	public double getAllTeachersSalaries() {
+		double salaries = 0;
+		for(int i = 0 ; i < teachers.size(); i++) {
+			salaries += teachers.get(i).getSalary();
+		}
+		return salaries;
+	}
+	
+	
 	// Check if School Balance is big enough ( for payments )
-	public boolean isSchoolBalanceBigEnough(double payment) {
+ 	public boolean isSchoolBalanceBigEnough(double payment) {
 		if(payment < this.schoolBalance) 
 			return true;
 		if(payment >= this.schoolBalance)

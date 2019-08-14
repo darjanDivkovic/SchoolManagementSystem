@@ -89,6 +89,10 @@ public class MAIN {
 				double payment = Util.unos.nextDouble();
 				school.paySalaryToTeacher(id, payment);
 			}
+			if(pick == 2) {
+				System.out.println("HANDING OUT SALARIES TO ALL TEACHERS");
+				school.paySalaryToAllTeachers();
+			}
 		    }
 		    while(pick != 4);
 		    pick = 0;

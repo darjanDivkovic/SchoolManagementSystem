@@ -23,8 +23,11 @@ public class Teacher extends Person {
 	Teacher()
 	{
 		super();
+		this.salary = createNewSalary();
 	}
 	
+	
+
 	Teacher(String test){
 		super(test);
 		this.salary = 0;
@@ -37,6 +40,11 @@ public class Teacher extends Person {
 		this.salary = salary;
 	}
 
+	private double createNewSalary() {
+		System.out.println("Enter new salary");
+		double salary = Util.unos.nextDouble();
+		return salary;
+	}
 	
 	// Get & Set
 	public double getSalary() {
@@ -49,6 +57,15 @@ public class Teacher extends Person {
 	
 	public double getMoneyRecievedInSalaries() {
 		return moneyRecievedInSalaries;
+	}
+	
+	@Override
+	public String getName() {
+		return super.getName();
+	}
+	@Override
+	public String getSurname() {
+		return super.getSurname();
 	}
 
 	// RecieveSalary
