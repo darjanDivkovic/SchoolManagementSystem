@@ -9,7 +9,7 @@ public class School {
 	ArrayList<Student> students = new ArrayList();
 	
 	double moneyEarned = 0;
-	double schoolBalance = 0;
+	double schoolBalance = 10000;
 	double paidInSalaries = 0;
 	
 	// Constructors
@@ -50,14 +50,7 @@ public class School {
 
 		return paidInSalaries;
 	}
-	
-	// Create new school Member and add to respectable arrayL
 		
-	// Takes the Person from createNewPerson method and uses polymorphism to declare the type
-	// depending on the user input - S - student - T - techer
-	
-	
-	
 	public void addNewTeacherToTeachers() {
 		
 		System.out.println("Adding a new staff member!");
@@ -68,6 +61,7 @@ public class School {
 	}
 
 	// Print out School Register
+	
 	public void printOutSchoolRegister() {
 		System.out.println("TEACHERS :");
 		for(int i = 0 ; i < teachers.size() ; i++) {
@@ -78,7 +72,7 @@ public class School {
 		for(int i = 0 ; i < students.size() ; i++) {
 			System.out.println(students.get(i).toString());
 		}
-		
+		System.out.println("---------------------------------");
 	}
 	
 	private Person getTypeOfPerson(Person person, String pick) {
@@ -116,6 +110,12 @@ public class School {
 	
 	// Pay salary to teacher
 	public double paySalaryToTeacher(int id, double payment) {
+
+		if(!isSchoolBalanceBigEnough(payment)) {
+			System.out.println("Balance not big enough");
+			return 0;
+		}
+		
 		// bring him here
 		Teacher teacher = null;
 		// Find teacher by id
@@ -126,5 +126,14 @@ public class School {
 		
 		return payment;
 		
+	}
+
+	// Check if School Balance is big enough ( for payments )
+	public boolean isSchoolBalanceBigEnough(double payment) {
+		if(payment < this.schoolBalance) 
+			return true;
+		if(payment >= this.schoolBalance)
+			return false;
+		return false;
 	}
 }
