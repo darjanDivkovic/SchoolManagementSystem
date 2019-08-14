@@ -1,6 +1,6 @@
 package SchoolManagementSystem.com.darjanDivkovic;
 
-import javax.swing.text.Utilities;
+import java.sql.Connection;
 
 public class MAIN {
 	
@@ -21,6 +21,7 @@ public class MAIN {
 		
 	
 		School school = new School();
+		Connection connection = DatabaseOperations.getConnection();
 		System.out.println("Welcome to ShcoolManagementSystem");
 		System.out.println("----------------------------------");
 		
