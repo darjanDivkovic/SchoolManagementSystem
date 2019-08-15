@@ -22,7 +22,7 @@ public class DatabaseOperations {
 		
 		try {
 			connection = DriverManager.getConnection(CONN_STRING, USERNAME, PASSWORD);
-			System.out.println("Connection established!");
+			
 		}
 		catch ( SQLException e ) {
 			System.err.println(e+" !");
