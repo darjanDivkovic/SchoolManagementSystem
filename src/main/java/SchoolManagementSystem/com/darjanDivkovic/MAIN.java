@@ -1,7 +1,11 @@
 package SchoolManagementSystem.com.darjanDivkovic;
 
+<<<<<<< HEAD
 import java.sql.Connection;
 import java.sql.SQLException;
+=======
+import javax.swing.text.Utilities;
+>>>>>>> parent of 89cd8d4... ADDED : connectivity to database
 
 public class MAIN {
 	
@@ -22,7 +26,6 @@ public class MAIN {
 		
 	
 		School school = new School();
-		Connection connection = DatabaseOperations.getConnection();
 		System.out.println("Welcome to ShcoolManagementSystem");
 		System.out.println("----------------------------------");
 		
