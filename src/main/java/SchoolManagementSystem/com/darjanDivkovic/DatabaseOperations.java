@@ -55,22 +55,8 @@ public class DatabaseOperations {
 		}
 		return teacher;
 	}
+	
 
-	public static ArrayList fillAllIds(ArrayList<Integer> ids) throws SQLException {
-		
-		// Creating a QUERY
-		String query = "SELECT id FROM teachers";
-			
-		// Creating a statement
-		Statement st = getConnection().createStatement();
-				
-		// Execure query into result set with statement
-		ResultSet rs = st.executeQuery(query);
-		
-		while(!rs.next()) {
-			ids.add(rs.getInt("id"));
-		}
-		
-		return ids;
-	}
+	
+	
 }

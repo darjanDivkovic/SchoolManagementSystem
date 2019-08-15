@@ -1,11 +1,11 @@
 package SchoolManagementSystem.com.darjanDivkovic;
 
-<<<<<<< HEAD
+
 import java.sql.Connection;
 import java.sql.SQLException;
-=======
+
 import javax.swing.text.Utilities;
->>>>>>> parent of 89cd8d4... ADDED : connectivity to database
+
 
 public class MAIN {
 	

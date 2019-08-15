@@ -14,24 +14,13 @@ public class School {
 	double paidInSalaries = 0;
 	
 	// Constructors
-	School() throws SQLException {
-		loadSchoolMembersFromDB();
-	}
+	School(){}
 	
 	School(double schoolBalance){
 		this.schoolBalance = schoolBalance;
 	}
 	
-	// Initial loading of school members from database
-	private void loadSchoolMembersFromDB() throws SQLException {
-		ArrayList<Integer> ids = null;
-		ids = DatabaseOperations.fillAllIds(ids);
-		
-		for(int i = 0 ; i < ids.size() ; i++) {
-			int findThisId = ids.get(i);
-			this.teachers.add(DatabaseOperations.fillTeachersDataFromDB(findThisId));
-		}
-	}
+	
 	
 	// Recieve a payment
 	public void recievePayment(double payment) {

@@ -83,6 +83,13 @@ public class Teacher extends Person {
 		
 	}
 
+
+
+	public void setMoneyRecievedInSalaries(double moneyRecievedInSalaries2) {
+		this.moneyRecievedInSalaries = moneyRecievedInSalaries2;
+		
+	}
+
 	
 	
 	
