@@ -20,7 +20,14 @@ public class School {
 		this.schoolBalance = schoolBalance;
 	}
 	
-	
+	// Constructor that fills in the school with teachers
+	School(String fill) throws SQLException {
+		// If "fill" is parsed in constructorm
+		// A list fills with teachers
+		if(fill.equals("fill")) {
+			fillTeachersFromDatabase();
+		}
+	}
 	
 	// Recieve a payment
 	public void recievePayment(double payment) {
@@ -206,6 +213,48 @@ public class School {
  	
  	public int getNumberOfTechers() {
  		return teachers.size();
+ 	}
+ 	
+ 	// Fill teachers from database
+ 	public void fillTeachersFromDatabase() throws SQLException {
+ 		// Fill in desired ID's to AList 
+ 		ArrayList<Integer> teacherIDs = DatabaseOperations.teacherslistOfIDsToRequest();
+ 		
+ 		for(int i = 0 ; i < teacherIDs.size() ; i++) {
+ 			Teacher teacher = null;
+ 			// Next ID to find
+ 			int id = teacherIDs.get(i);
+ 			// Give that id and recieve teacher
+ 			teacher = DatabaseOperations.fillTeachersDataFromDB(id);
+ 			// add teacher to teachers.
+ 			teachers.add(teacher);
+ 			System.out.println(teacher.getName()+" came to school!");
+ 		}
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
  	}
 
 
