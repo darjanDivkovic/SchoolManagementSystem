@@ -1,6 +1,7 @@
 package SchoolManagementSystem.com.darjanDivkovic;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class databaseMain {
 
@@ -11,9 +12,13 @@ public class databaseMain {
 		
 		System.out.println(teacher.toString());
 		
-		School school = new School();
+		// Print out IDS of teachers
+		ArrayList<Integer> ids = DatabaseOperations.teacherslistOfIDsToRequest();
 		
-		school.printOutSchoolRegister();
+		for(int x : ids) {
+			System.out.println("id = "+x);
+		}
+		
 	}
 
 }

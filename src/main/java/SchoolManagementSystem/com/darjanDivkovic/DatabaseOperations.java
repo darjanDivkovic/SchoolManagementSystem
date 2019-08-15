@@ -1,6 +1,11 @@
 package SchoolManagementSystem.com.darjanDivkovic;
 
 import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 
@@ -56,7 +61,26 @@ public class DatabaseOperations {
 		return teacher;
 	}
 	
-
+	//Should return all ids from teachers
+	public static ArrayList<Integer> teacherslistOfIDsToRequest() throws SQLException {
+		ArrayList<Integer> teachersIds= new ArrayList();
+		
+		// Set a query
+		String query = "SELECT * FROM teachers";
+		
+		// Create statement
+		Statement statement = getConnection().createStatement();
+		
+		// Make result set
+		ResultSet resultSet = statement.executeQuery(query);
+		
+		while(resultSet.next()) {
+			teachersIds.add(resultSet.getInt("id"));
+		}
+		
+		return teachersIds;
+	}
+   
 	
 	
 }
