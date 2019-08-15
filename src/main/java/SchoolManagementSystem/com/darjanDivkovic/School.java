@@ -26,6 +26,7 @@ public class School {
 		// A list fills with teachers
 		if(fill.equals("fill")) {
 			fillTeachersFromDatabase();
+			fillStudentsFromDatabase();
 		}
 	}
 	
@@ -228,10 +229,25 @@ public class School {
  			teacher = DatabaseOperations.fillTeachersDataFromDB(id);
  			// add teacher to teachers.
  			teachers.add(teacher);
- 			System.out.println(teacher.getName()+" came to school!");
+ 			System.out.println("Teacher -> "+teacher.getName()+" came to school!");
  		}
+ 	}
  	
- 	
+ 	public void fillStudentsFromDatabase() throws SQLException {
+ 	// Fill in desired ID's to AList 
+ 	 		ArrayList<Integer> studentIDs = DatabaseOperations.studentslistOfIDsToRequest();
+ 	 		
+ 	 		for(int i = 0 ; i < studentIDs.size() ; i++) {
+ 	 			Student student = null;
+ 	 			// Next ID to find
+ 	 			int id = studentIDs.get(i);
+ 	 			// Give that id and recieve student
+ 	 			student = DatabaseOperations.fillStudentsDataFromDB(id);
+ 	 			// add student to students
+ 	 			students.add(student);
+ 	 			System.out.println("Student -> "+student.getName()+" came to school!");
+ 	 	
+ 	}
  	
  	
  	

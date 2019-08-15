@@ -61,7 +61,14 @@ public class Student extends Person{
 		return object;
 	}
 
-	
+	public void setFeesPaid(double feesPaid2) {
+		this.feesPaid = feesPaid2;
+		
+	}
+
+	public void setFeesLeftToPay(double feesLeftToPay) {
+		this.feesLeftToPay = feesLeftToPay;
+	}
 	
 	
 }

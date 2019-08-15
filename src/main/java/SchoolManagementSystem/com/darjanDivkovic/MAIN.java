@@ -25,7 +25,7 @@ public class MAIN {
 	public static void main(String[] args) throws SQLException {
 		
 	
-		School school = new School();
+		School school = new School("fill");
 		System.out.println("Welcome to ShcoolManagementSystem");
 		System.out.println("----------------------------------");
 		
