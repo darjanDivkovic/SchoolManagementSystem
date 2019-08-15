@@ -132,6 +132,19 @@ public class DatabaseOperations {
 		return student;
 	}
 
+	// Update database when new Teacher added
+	public static void updateDatabaseWhenNewTeacherAdded(Teacher teacher) throws SQLException {
+		
+		// insert into teachers values (?,?,?,?,?);
+		PreparedStatement preparedStatement = getConnection().prepareStatement("insert into teachers values (?,?,?,?,?)");
+		preparedStatement.setInt(1, teacher.getId());
+		preparedStatement.setString(2, teacher.getName());
+		preparedStatement.setString(3, teacher.getSurname());
+		preparedStatement.setDouble(4, teacher.getSalary());
+		preparedStatement.setDouble(5, teacher.getMoneyRecievedInSalaries());
+		
+		preparedStatement.executeUpdate();
+	}
 
 
 }

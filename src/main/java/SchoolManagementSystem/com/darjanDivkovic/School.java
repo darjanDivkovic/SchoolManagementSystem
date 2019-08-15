@@ -62,11 +62,11 @@ public class School {
 		return paidInSalaries;
 	}
 		
-	public void addNewTeacherToTeachers() {
+	public void addNewTeacherToTeachers() throws SQLException {
 		
 		System.out.println("Adding a new staff member!");
 		Teacher teacher = new Teacher();
-	
+		DatabaseOperations.updateDatabaseWhenNewTeacherAdded(teacher);
 		teachers.add(teacher);
 		System.out.println("New member added ! :)");
 	}
