@@ -10,6 +10,10 @@ public class databaseMain {
 		teacher = DatabaseOperations.fillTeachersDataFromDB(1);
 		
 		System.out.println(teacher.toString());
+		
+		School school = new School();
+		
+		school.printOutSchoolRegister();
 	}
 
 }

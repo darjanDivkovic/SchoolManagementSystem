@@ -1,0 +1,179 @@
+[33mcommit 89cd8d44c19abe9cf4603550a731d0a1bde61e14[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mrepo/master[m[33m)[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Wed Aug 14 18:48:03 2019 +0200
+
+    ADDED : connectivity to database
+
+[33mcommit aa3000182fa1fe8a7dbda81cbe9e68192d54f7fc[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Wed Aug 14 13:44:51 2019 +0200
+
+    ADDED : all functionalities of CHECK BALANCE AND DEBT option
+
+[33mcommit 8ec51b11a027dac8754ce19de8ec19fe4838e736[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Wed Aug 14 13:20:22 2019 +0200
+
+    ADDED : /
+
+[33mcommit 7aa204ce1fa92888c4e3907617e5523d42b86073[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Wed Aug 14 13:18:20 2019 +0200
+
+    ADDED: students can now pay their debts!
+
+[33mcommit a3776da4cb0fb6f89682532392a387d9bda4c302[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Wed Aug 14 11:45:44 2019 +0200
+
+    ADDED : it's now possible to pay all teachers at once, if schoolBalance big enough!
+
+[33mcommit 79af7bbae1469c870c725cb38909bfdcadd5adb9[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Wed Aug 14 11:19:24 2019 +0200
+
+    ADDED : School balance must be big enough to hand out pays
+
+[33mcommit 2d9ec8ceaee2c263af7e691107644820513e35ce[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Wed Aug 14 11:03:22 2019 +0200
+
+    UPDATE: specific teacher can now recieve salaries from school!
+
+[33mcommit 4abd8ceaee209d3e214cacf36670c49265781f29[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Wed Aug 14 10:53:03 2019 +0200
+
+    ADDED : It's now possible to add teacher/student to their respectable AL's
+
+[33mcommit 38bbe260358034fd2f50c2b8b22df3eb77b1e1f6[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Wed Aug 14 10:13:12 2019 +0200
+
+    ADDED : UI came to life, added Find person in register
+
+[33mcommit 9058aebd417cbc1db0bfbd8c5ce8c743ad83afea[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Tue Aug 13 15:59:46 2019 +0200
+
+    FINISHED : getANiceMessage for MISC
+
+[33mcommit 3c57ffc6a1fe83d6e63135ffe08e3b6cc36689f4[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Tue Aug 13 15:50:40 2019 +0200
+
+    ADDED : date and time function in MISC
+
+[33mcommit c57939de97c1189ef45d225541598917dcf1d248[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Tue Aug 13 15:31:47 2019 +0200
+
+    UI : finished for now
+
+[33mcommit aefb37350f8726e0d190a17efbd556fc6ac73225[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Tue Aug 13 15:25:05 2019 +0200
+
+    ADDED : UI for check balance and debt info
+
+[33mcommit f564ca6567603dadd792c6897a35e4e82ef9ea65[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Tue Aug 13 15:21:01 2019 +0200
+
+    ADDED : UI for MANAGE PAYMENTS
+
+[33mcommit bc6cc4c80c6834fc05e05743c70b85f4c8ae1eab[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Tue Aug 13 15:02:00 2019 +0200
+
+    FINISHED: some tests, Finished UI for SCHOOL REGISTER OPTIONS
+
+[33mcommit be0e03d2dce5062d28a9d6113b586cca7e428727[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Tue Aug 13 14:08:21 2019 +0200
+
+    ADDED : Test for Teacher Class
+
+[33mcommit fc57a079e5755503b7b2f4013986609b68d7f26b[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Tue Aug 13 13:30:21 2019 +0200
+
+    TWEAKED: everybodys toString method to look decent at least.
+
+[33mcommit e0f921bf31cd1d5ff90dd2a92ddd1778111c0626[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Tue Aug 13 13:17:17 2019 +0200
+
+    It's now possible to add a new person to school T/S !
+
+[33mcommit 26d12e601e9ad10ee68293078ca26530241c596d[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Tue Aug 13 13:05:01 2019 +0200
+
+    CHANGED: Constructor of Person class now contains methods that provide person creation process!
+
+[33mcommit 736a84a2e6036f5b8389f544f0ec254de80bf416[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Mon Aug 12 18:29:39 2019 +0200
+
+    ADDED: Plans for the future of the project!
+
+[33mcommit 12142f7855d68a99fe737bb4c0be06e90dc06f33[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Mon Aug 12 18:24:17 2019 +0200
+
+    ADDED: a lot :')
+
+[33mcommit aab8cc81f7bdafc5a3d5b16e8112587b6a59d76e[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Mon Aug 12 17:00:46 2019 +0200
+
+    REMOVED: createNewPerson, ADDED: createNewTeacher() - don't like this solution
+
+[33mcommit 8384163d506f92947d1e7c08542258bfc8215afd[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Mon Aug 12 16:48:38 2019 +0200
+
+    ADDED: school.createNewPerson();
+
+[33mcommit 1d7b0ef3ad8b4809f02f426fc1fb037bb0a5afee[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Mon Aug 12 16:22:50 2019 +0200
+
+    ADDED: tacher.recieveSalary() + tested
+
+[33mcommit fbfcd4e81d6831aed541e918924fdad2a5a4aaf0[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Mon Aug 12 16:17:43 2019 +0200
+
+    ADDED: payTeacher + tests
+
+[33mcommit aec5b59216d85dded408b7861ea223f458caf067[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Mon Aug 12 15:43:41 2019 +0200
+
+    ADDED : school.recievePayment() + tested
+
+[33mcommit 1edf731a3b8b6ae30e58e53ab1fcf272aa8c8e45[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Mon Aug 12 15:16:42 2019 +0200
+
+    ADDED : studentPays + tests
+
+[33mcommit b144c54f063ac858011c91fcd6544c37e2b2a3ee[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Mon Aug 12 14:09:51 2019 +0200
+
+    ADDED : Teacher class
+
+[33mcommit 356496fbc96a3e09af4f9879b988457b54e5749f[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Mon Aug 12 13:54:29 2019 +0200
+
+    Created Person Class
+
+[33mcommit ec4ab52b18be65c905366b4f9ef80965dbbe8723[m
+Author: Darjan Divkovic <daarjan.tz@gmail.com>
+Date:   Mon Aug 12 13:49:24 2019 +0200
+
+    Initial commit!

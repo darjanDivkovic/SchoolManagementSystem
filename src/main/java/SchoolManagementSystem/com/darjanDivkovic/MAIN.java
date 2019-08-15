@@ -1,6 +1,7 @@
 package SchoolManagementSystem.com.darjanDivkovic;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 
 public class MAIN {
 	
@@ -17,7 +18,7 @@ public class MAIN {
 	 * 
 	 */
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		
 	
 		School school = new School();
