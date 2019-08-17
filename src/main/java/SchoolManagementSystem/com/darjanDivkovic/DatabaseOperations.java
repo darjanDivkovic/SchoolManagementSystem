@@ -209,4 +209,18 @@ public class DatabaseOperations {
 		
 	}
 	
+	// -> Update database for school finances data
+	public static void updateDatabaseForSchoolFinancesData(double newBalance, double newMoneyEarned, double newPaidInSalaries) throws SQLException {
+		
+		String query = ("UPDATE teachers SET schoolBalance = ?, schoolMoneyEarned = ?, school");
+		
+		PreparedStatement preparedStatement = getConnection().prepareStatement(query);
+		preparedStatement.setDouble(1, newBalance);
+		preparedStatement.setDouble(2, newMoneyEarned);
+		preparedStatement.setDouble(2, newPaidInSalaries);
+		
+
+		preparedStatement.executeUpdate();
+		
+	}
 }

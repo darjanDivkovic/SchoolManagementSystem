@@ -158,7 +158,9 @@ public class MAIN {
 		
 		}
 		while(pick != 5);
+		DatabaseOperations.updateDatabaseForSchoolFinancesData(school.getSchoolBalance(), school.getMoneyEarned(), school.getSalariesPaid());
 		System.out.println("Bye !");
+		
 	}
 
 }
