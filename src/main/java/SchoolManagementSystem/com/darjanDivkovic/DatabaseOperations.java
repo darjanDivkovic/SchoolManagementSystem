@@ -160,7 +160,9 @@ public class DatabaseOperations {
 			
 			preparedStatement.executeUpdate();
 		}
-
+	
+	// Gets school finances details by parsed request
+	// String with value of tableRow gets retured when request parsed
 	public static double getSchoolsFinancesInfo(String request) throws SQLException {
 		
 		// Create statement
@@ -192,4 +194,6 @@ public class DatabaseOperations {
 		
 		
 	}
+
+	
 }
