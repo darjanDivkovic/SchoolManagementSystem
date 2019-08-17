@@ -22,6 +22,8 @@ public class School {
 	
 	// Constructor that fills in the school with teachers
 	School(String fill) throws SQLException {
+
+
 		// If "fill" is parsed in constructorm
 		// A list fills with teachers
 		if(fill.equals("fill")) {
@@ -63,6 +65,7 @@ public class School {
 	}
 		
 	public void addNewTeacherToTeachers() throws SQLException {
+
 		
 		System.out.println("Adding a new staff member!");
 		Teacher teacher = new Teacher();
@@ -71,6 +74,19 @@ public class School {
 		System.out.println("New member added ! :)");
 	}
 
+	public void addNewStudentToStudents() throws SQLException {
+
+		System.out.println("Adding a new Student member!");
+		Student student = new Student();
+	
+		
+		students.add(student);
+		DatabaseOperations.updateDatabaseWhenNewStudentrAdded(student);
+		System.out.println("New Student added ! :)");
+		
+	}
+
+	
 	// Print out School Register
 	
 	public void printOutSchoolRegister() {
@@ -85,6 +101,7 @@ public class School {
 		}
 		System.out.println("---------------------------------");
 	}
+	
 	
 	private Person getTypeOfPerson(Person person, String pick) {
 
@@ -125,15 +142,7 @@ public class School {
 			return null;
 		}
 	
-	public void addNewStudentToStudents() {
-		System.out.println("Adding a new Student member!");
-		Student student = new Student();
 	
-		students.add(student);
-		System.out.println("New Student added ! :)");
-		
-	}
-	//
 	// Pay salary to teacher
 	public double paySalaryToTeacher(int id, double payment) {
 

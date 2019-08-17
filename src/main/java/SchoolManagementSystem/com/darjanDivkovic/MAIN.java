@@ -26,6 +26,8 @@ public class MAIN {
 		
 	
 		School school = new School("fill");
+		
+		System.out.println("----------------------------------");
 		System.out.println("Welcome to ShcoolManagementSystem");
 		System.out.println("----------------------------------");
 		
