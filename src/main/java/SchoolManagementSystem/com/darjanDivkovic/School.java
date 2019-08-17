@@ -223,10 +223,13 @@ public class School {
 	
 	// Check if School Balance is big enough ( for payments )
  	public boolean isSchoolBalanceBigEnough(double payment) {
+
 		if(payment < this.schoolBalance) 
 			return true;
-		if(payment >= this.schoolBalance)
+		if(payment >= this.schoolBalance) {
+			System.out.println("Balance is not big enough!");
 			return false;
+		}
 		return false;
 	}
 
