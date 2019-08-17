@@ -187,7 +187,8 @@ public class School {
 	}
 
 	// Pay salary to all teachers
-	public double paySalaryToAllTeachers() {
+	public double paySalaryToAllTeachers() throws SQLException {
+
 		// Find how much to pay
 		double salariesToPay = getAllTeachersSalaries();
 		// Find out is it possible to pay the amount
@@ -200,6 +201,10 @@ public class School {
 				teachers.get(i).recieveSalary(toPayNext);
 				this.schoolBalance -= toPayNext;
 				this.paidInSalaries += toPayNext;
+				Teacher teacher = teachers.get(i);
+				int id = teacher.getId();
+				double newRecievedInSalaries = teacher.getMoneyRecievedInSalaries() + toPayNext;
+				DatabaseOperations.updateDatabaseWhenSalarieGivenToTeacher(id, newRecievedInSalaries);
 				System.out.println(teachers.get(i).getName()+" "+teachers.get(i).getSurname()+" got paid = "+toPayNext+"$");
 			}
 		}
