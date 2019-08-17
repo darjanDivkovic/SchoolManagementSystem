@@ -9,9 +9,9 @@ public class School {
 	ArrayList<Teacher> teachers = new ArrayList();
 	ArrayList<Student> students = new ArrayList();
 	
-	double moneyEarned;
-	double schoolBalance;
-	double paidInSalaries;
+	private double moneyEarned;
+	private double schoolBalance;
+	private double paidInSalaries;
 	
 	// Constructors
 	School(){}
@@ -43,6 +43,7 @@ public class School {
 	}
 	
 	public double payTeacher(double payment) {
+
 		if(schoolBalance >= payment) {
 		schoolBalance -= payment;
 		paidInSalaries += payment;
@@ -162,7 +163,6 @@ public class School {
 	// Pay salary to teacher
 	public double paySalaryToTeacher(int id, double payment) {
 
-
 		if(!isSchoolBalanceBigEnough(payment)) {
 			System.out.println("Balance not big enough");
 			return 0;
@@ -176,6 +176,7 @@ public class School {
 		// Make him recieve his salary
 		teacher.recieveSalary(payment);
 		this.schoolBalance -= payment;
+		this.paidInSalaries += payment;
 		return payment;
 		
 	}
@@ -192,14 +193,16 @@ public class School {
 				double toPayNext = teachers.get(i).getSalary();
 				// Pay him his salary
 				teachers.get(i).recieveSalary(toPayNext);
+				this.schoolBalance -= toPayNext;
+				this.paidInSalaries += toPayNext;
 				System.out.println(teachers.get(i).getName()+" "+teachers.get(i).getSurname()+" got paid = "+toPayNext+"$");
 			}
 		}
 		return salariesToPay;
 	}
 	
-	
 	public double getAllTeachersSalaries() {
+
 
 		double salaries = 0;
 		for(int i = 0 ; i < teachers.size(); i++) {
@@ -223,6 +226,7 @@ public class School {
  	// Find student
  	
  	public double recievePaymentFromStudent(int id) {
+
  		//Find student
  		Student student = findStudentInRegister(id);
  		System.out.println("How much does "+student.getName()+" wants to pay ?");
@@ -234,6 +238,7 @@ public class School {
  		System.out.println("Has paid: "+student.getFeesPaid()+" $");
  		
  		this.schoolBalance += feePaid;
+ 		setMoneyEarned(feePaid);
  		return feePaid;
  	}
  	

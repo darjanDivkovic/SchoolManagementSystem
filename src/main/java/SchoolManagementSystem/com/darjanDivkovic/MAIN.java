@@ -125,11 +125,13 @@ public class MAIN {
 			}
 			if(pick == 2) {
 				System.out.println("SCHOOL HAS EARNED: ");
-				System.out.println(" -> "+school.moneyEarned);
+				System.out.println(" -> "+school.getMoneyEarned());
 			}
 			if(pick == 3) {
 				System.out.println("SCHOOL HAS TO PAY $ IN SALARIES");
-				double schoolHasToPay = school.getAllTeachersSalaries() - school.getSalariesPaid();
+				double schoolHasToPay = school.getAllTeachersSalaries();
+				schoolHasToPay -= school.getSalariesPaid();
+				System.out.println(school.getSalariesPaid());
 				System.out.print("	-> "+schoolHasToPay+" $ in salaries to :  ");
 				System.out.println(school.getNumberOfTechers()+" teachers.");
 				System.out.println();
