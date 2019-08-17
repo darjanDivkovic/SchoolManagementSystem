@@ -195,5 +195,18 @@ public class DatabaseOperations {
 		
 	}
 
+	// UPDATE DATABASE :
+	// -> When handing out salarie to specific teacher
+	public static void updateDatabaseWhenSalarieGivenToTeacher(int id, double recievedInSalariesNew) throws SQLException {
+		
+		PreparedStatement preparedStatement = getConnection().prepareStatement(
+				"UPDATE teachers SET moneyRecievedInSalaries = ? WHERE id = ?");
+		
+		preparedStatement.setDouble(1, recievedInSalariesNew);
+		preparedStatement.setInt(2, id);
+		
+		preparedStatement.executeUpdate();
+		
+	}
 	
 }

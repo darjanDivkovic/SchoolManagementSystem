@@ -161,7 +161,8 @@ public class School {
 	
 	
 	// Pay salary to teacher
-	public double paySalaryToTeacher(int id, double payment) {
+	public double paySalaryToTeacher(int id, double payment) throws SQLException {
+
 
 		if(!isSchoolBalanceBigEnough(payment)) {
 			System.out.println("Balance not big enough");
@@ -172,6 +173,10 @@ public class School {
 		Teacher teacher = null;
 		// Find teacher by id
 		teacher = findTeacherInRegister(id);
+		double oldRInSalaries = teacher.getMoneyRecievedInSalaries();
+		oldRInSalaries += payment;
+	    DatabaseOperations.updateDatabaseWhenSalarieGivenToTeacher(id, oldRInSalaries);
+		
 		
 		// Make him recieve his salary
 		teacher.recieveSalary(payment);
@@ -280,29 +285,7 @@ public class School {
  	 	
  	}
  	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	}
+}
 
  	// Fill schools finances info 
  	// Takes a request value :
