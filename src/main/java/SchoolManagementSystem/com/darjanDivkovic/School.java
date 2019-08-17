@@ -9,9 +9,9 @@ public class School {
 	ArrayList<Teacher> teachers = new ArrayList();
 	ArrayList<Student> students = new ArrayList();
 	
-	double moneyEarned = 0;
-	double schoolBalance = 10000;
-	double paidInSalaries = 0;
+	double moneyEarned;
+	double schoolBalance;
+	double paidInSalaries;
 	
 	// Constructors
 	School(){}
@@ -24,11 +24,15 @@ public class School {
 	School(String fill) throws SQLException {
 
 
+
 		// If "fill" is parsed in constructorm
 		// A list fills with teachers
 		if(fill.equals("fill")) {
 			fillTeachersFromDatabase();
 			fillStudentsFromDatabase();
+			fillSchoolsFinancesFromDatabase("schoolBalance");
+			fillSchoolsFinancesFromDatabase("schoolMoneyEarned");
+			fillSchoolsFinancesFromDatabase("schoolPaidInSalaries");
 		}
 	}
 	
@@ -64,6 +68,18 @@ public class School {
 		return paidInSalaries;
 	}
 		
+	public void setMoneyEarned(double moneyEarned) {
+		this.moneyEarned = moneyEarned;
+	}
+
+	public void setSchoolBalance(double schoolBalance) {
+		this.schoolBalance = schoolBalance;
+	}
+
+	public void setPaidInSalaries(double paidInSalaries) {
+		this.paidInSalaries = paidInSalaries;
+	}
+
 	public void addNewTeacherToTeachers() throws SQLException {
 
 		
@@ -243,6 +259,7 @@ public class School {
  	}
  	
  	public void fillStudentsFromDatabase() throws SQLException {
+
  	// Fill in desired ID's to AList 
  	 		ArrayList<Integer> studentIDs = DatabaseOperations.studentslistOfIDsToRequest();
  	 		
@@ -282,5 +299,22 @@ public class School {
  	
  	}
 
+ 	// Fill schools finances info 
+ 	// Takes a request value :
+ 	// those are -- schoolBalance -- 		returns schoolBalance from DB
+ 	// 			 -- schoolMoneyEarned		-same
+ 	// 			 -- schoolPaidInSalaries  	-same
+ 	public void fillSchoolsFinancesFromDatabase(String requestedValue) throws SQLException {
+ 		// Uses school setter to set initial schoolBalance
+ 		// Uses DB Operations. get school finances info and parses in the desired value
+ 		if(requestedValue.equals("schoolBalance"))
+ 		setSchoolBalance(DatabaseOperations.getSchoolsFinancesInfo(requestedValue));
+ 		
+ 		if(requestedValue.equals("schoolMoneyEarned"))
+ 		setMoneyEarned(DatabaseOperations.getSchoolsFinancesInfo(requestedValue));
+ 		
+ 		if(requestedValue.equals("schoolPaidInSalaries"))
+ 	 	setPaidInSalaries(DatabaseOperations.getSchoolsFinancesInfo(requestedValue));
+ 	}
 
 }

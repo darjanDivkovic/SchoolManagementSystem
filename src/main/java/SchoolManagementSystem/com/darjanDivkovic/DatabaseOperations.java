@@ -1,8 +1,8 @@
 package SchoolManagementSystem.com.darjanDivkovic;
 
-import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -147,7 +147,7 @@ public class DatabaseOperations {
 	}
 
 	// Update database when new Teacher added
-	public static void updateDatabaseWhenNewStudentrAdded(Student student) throws SQLException {
+	public static void updateDatabaseWhenNewStudentrAdded(Student student) throws SQLException { 
 
 			
 			// insert into teachers values (?,?,?,?,?);
@@ -161,4 +161,35 @@ public class DatabaseOperations {
 			preparedStatement.executeUpdate();
 		}
 
+	public static double getSchoolsFinancesInfo(String request) throws SQLException {
+		
+		// Create statement
+		Statement statement = getConnection().createStatement();
+		
+		// Set up query
+		String query = "SELECT * FROM school";
+		
+		ResultSet rs = statement.executeQuery(query);
+		
+		while(rs.next()) {
+			
+		if(request.equals("schoolBalance")) {
+			return rs.getDouble("schoolBalance");
+		}
+		
+		if(request.equals("schoolMoneyEarned")) {
+			return rs.getDouble("schoolMoneyEarned");
+		}
+		
+		if(request.equals("schoolPaidInSalaries")) {
+			return rs.getDouble("schoolPaidInSalaries");
+		}
+		
+		};
+		
+		return 0;
+				
+		
+		
+	}
 }
