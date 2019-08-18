@@ -24,6 +24,7 @@ public class MyLogger {
 		
 		logger.addHandler(handler);
 		handler.setFormatter(new SimpleFormatter());
+		logger.setUseParentHandlers(false);
 		
 		
 	}

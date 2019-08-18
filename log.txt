@@ -2,3 +2,7 @@ Aug 18, 2019 3:16:19 PM SchoolManagementSystem.com.darjanDivkovic.MyLogger logMe
 INFO: SMS started!
 Aug 18, 2019 3:16:24 PM SchoolManagementSystem.com.darjanDivkovic.MyLogger logMessage
 INFO: SMS started!
+Aug 18, 2019 3:17:51 PM SchoolManagementSystem.com.darjanDivkovic.MyLogger logMessage
+INFO: SMS started!
+Aug 18, 2019 3:17:56 PM SchoolManagementSystem.com.darjanDivkovic.MyLogger logMessage
+INFO: SMS started!
