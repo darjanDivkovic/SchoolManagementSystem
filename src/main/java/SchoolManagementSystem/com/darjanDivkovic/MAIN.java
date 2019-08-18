@@ -75,15 +75,18 @@ public class MAIN {
 				MyLogger.logMessage("Picked : 3. Back");
 				break;
 			case 2:
+				MyLogger.logMessage("PICKED : 2. View SchoolRegister");
 				school.printOutSchoolRegister();
 				break;
 			}
 			}
 			while(pick != 3);
+			MyLogger.logMessage("Picked : 3. Back");
 			pick = 0;
 			}
 			if(pick == 2) {
 		    do {
+		    	MyLogger.logMessage("Picked : 2.MANAGE PAYMENTS");
 		   	System.out.println("MANAGE PAYMENTS:");
 			System.out.println("	1. -> Hand out salarie to specific Teacher");
 			System.out.println("	2. -> Give salaries to all Teachers");
@@ -92,6 +95,7 @@ public class MAIN {
 			pick = Util.unos.nextInt();
 			
 			if(pick == 1) {
+				MyLogger.logMessage("Picked : 1. Hand out salarie to specific Teacher");
 				System.out.println("HANDING OUT A SALARY!");
 				System.out.println("Enter teachers id:");
 				System.out.println("Enter the dedsired payment:");
@@ -101,10 +105,12 @@ public class MAIN {
 				school.paySalaryToTeacher(id, payment);
 			}
 			if(pick == 2) {
+				MyLogger.logMessage("Picked : 2. Give Salaries to all Teachs");
 				System.out.println("HANDING OUT SALARIES TO ALL TEACHERS");
 				school.paySalaryToAllTeachers();
 			}
 			if(pick == 3) {
+				MyLogger.logMessage("Picked : 3. Recieve payment from student");
 				System.out.println("RECIEVE PAYMENT FROM STUDENT");
 				System.out.println("Enter the id of the student:");
 				int id = Util.unos.nextInt();
@@ -112,26 +118,31 @@ public class MAIN {
 			}
 		    }
 		    while(pick != 4);
+		    MyLogger.logMessage("Picked : 4. Back");
 		    pick = 0;
 		    }
 			if(pick == 3) {
 		    do {
+		    	MyLogger.logMessage("Picked : 3. CHECK BALANCE AND DEBT INFO");
 			System.out.println("CHECH BALANCE AND DEBT INFO: ");
 			System.out.println("	1. -> Check Schools balance");
 			System.out.println("	2. -> Check Money Earned");
-			System.out.println("	3. -> Check what the school owns");	
+			System.out.println("	3. -> Check what the school owes");	
 			System.out.println("	4. <- BACK ");
 				
 			pick = Util.unos.nextInt();
 			if(pick == 1) {
+				MyLogger.logMessage("Picked : 1. Check Schools balance");
 				System.out.println("CURRENT SCHOOL BALANCE IS: ");
 				System.out.println(" -> "+school.getSchoolBalance());
 			}
 			if(pick == 2) {
+				MyLogger.logMessage("Picked : 2. Check money Earned");
 				System.out.println("SCHOOL HAS EARNED: ");
 				System.out.println(" -> "+school.getMoneyEarned());
 			}
 			if(pick == 3) {
+				MyLogger.logMessage("Picked : 3. Check what the school owes");
 				System.out.println("SCHOOL HAS TO PAY $ IN SALARIES");
 				double schoolHasToPay = school.getAllTeachersSalaries();
 				schoolHasToPay -= school.getSalariesPaid();
@@ -143,6 +154,7 @@ public class MAIN {
 			}
 		    }
 		    while(pick != 4);
+		    MyLogger.logMessage("Picked : 4. Back");
 		    pick = 0;
 		    }
 			if(pick == 4) {
@@ -164,7 +176,7 @@ public class MAIN {
 		while(pick != 5);
 		DatabaseOperations.updateDatabaseForSchoolFinancesData(school.getSchoolBalance(), school.getMoneyEarned(), school.getSalariesPaid());
 		System.out.println("Bye !");
-		
+		MyLogger.logMessage("Picked : 5. EXIT");
 	}
 
 }
