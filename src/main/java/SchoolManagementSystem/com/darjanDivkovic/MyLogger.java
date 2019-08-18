@@ -10,6 +10,7 @@ public class MyLogger {
 	
 	private static Logger logger = Logger.getLogger("MyLogger");
 	private static FileHandler handler;
+	private static int stepsTakenBeforeExit = 1;
 	
 	private static void prepareLogger() {
 
@@ -31,7 +32,8 @@ public class MyLogger {
 	
 	public static void logMessage(String message) {
 		prepareLogger();
-		logger.info(message);
+		logger.info(stepsTakenBeforeExit+" : "+message);
+		stepsTakenBeforeExit++;
 		handler.close();
 	}
 }

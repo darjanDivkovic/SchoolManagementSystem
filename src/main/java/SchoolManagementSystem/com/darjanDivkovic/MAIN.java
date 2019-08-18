@@ -26,7 +26,6 @@ public class MAIN {
 		
 	
 		School school = new School("fill");
-		MyLogger myLogger = new MyLogger();
 		
 		System.out.println("----------------------------------");
 		System.out.println("Welcome to ShcoolManagementSystem");
@@ -44,6 +43,7 @@ public class MAIN {
 			pick = Util.unos.nextInt();
 
 			if(pick == 1) {
+				MyLogger.logMessage("PICKED : 1. SCHOOL REGISTER OPTIONS ");
 			do {
 			System.out.println("SCHOOL REGISTER OPTIONS:");
 			System.out.println("	1. -> Add new Person to SchoolRegister ");
@@ -55,6 +55,7 @@ public class MAIN {
 			switch(pick) {
 			case 1:
 				do {
+					MyLogger.logMessage("PICKED : 1. Add new Person to SchoolRegister ");
 					pick = 0;
 					System.out.println("		1. -> Add new Teacher!");
 					System.out.println("		2. -> Add new Student!");
@@ -62,14 +63,16 @@ public class MAIN {
 					pick = Util.unos.nextInt();
 					
 					if(pick == 1) {
+						MyLogger.logMessage("PICKED : 1. Add new Teacher!");
 						school.addNewTeacherToTeachers();
 					}
 					if(pick == 2) {
+						MyLogger.logMessage("PICKED : 2. Add new Student!");
 						school.addNewStudentToStudents();
 					}
 				}
 				while(pick != 3);
-				
+				MyLogger.logMessage("Picked : 3. Back");
 				break;
 			case 2:
 				school.printOutSchoolRegister();
