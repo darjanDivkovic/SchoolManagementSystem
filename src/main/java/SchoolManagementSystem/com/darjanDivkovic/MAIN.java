@@ -26,11 +26,12 @@ public class MAIN {
 		
 	
 		School school = new School("fill");
+		MyLogger myLogger = new MyLogger();
 		
 		System.out.println("----------------------------------");
 		System.out.println("Welcome to ShcoolManagementSystem");
 		System.out.println("----------------------------------");
-		
+		MyLogger.logMessage("SMS started!");
 		int pick = 0;
 		do {
 			System.out.println("CHOOSE:");
