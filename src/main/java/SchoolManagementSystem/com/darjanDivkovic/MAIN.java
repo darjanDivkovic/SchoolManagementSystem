@@ -17,8 +17,7 @@ public class MAIN {
 	 * - NAPRAVITI GUI
 	 * - NAPRAVITI SERVLET OD OVOGA
 	 * 
-	 * 
-	 * 
+
 	 * 
 	 */
 
